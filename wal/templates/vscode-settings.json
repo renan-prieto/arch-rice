@@ -1,0 +1,51 @@
+{{
+    "workbench.colorCustomizations": {{
+        "editor.background": "{background}",
+        "editor.foreground": "{foreground}",
+        "editorCursor.foreground": "{color4}",
+        "editor.selectionBackground": "{color4}55",
+        "editor.lineHighlightBackground": "{color4}12",
+
+        "editorLineNumber.foreground": "{color8}",
+        "editorLineNumber.activeForeground": "{color4}",
+
+        "sideBar.background": "{background}",
+        "sideBar.foreground": "{foreground}",
+        "sideBar.border": "{color8}44",
+
+        "activityBar.background": "{background}",
+        "activityBar.foreground": "{foreground}",
+        "activityBar.inactiveForeground": "{color8}",
+        "activityBar.activeBorder": "{color4}",
+
+        "titleBar.activeBackground": "{background}",
+        "titleBar.activeForeground": "{foreground}",
+        "titleBar.inactiveBackground": "{background}",
+        "titleBar.inactiveForeground": "{color8}",
+
+        "tab.activeBackground": "{background}",
+        "tab.activeForeground": "{foreground}",
+        "tab.inactiveBackground": "{background}",
+        "tab.inactiveForeground": "{color8}",
+        "tab.activeBorderTop": "{color4}",
+
+        "statusBar.background": "{background}",
+        "statusBar.foreground": "{foreground}",
+
+        "panel.background": "{background}",
+        "panel.border": "{color8}44",
+
+        "terminal.background": "{background}",
+        "terminal.foreground": "{foreground}",
+
+        "input.background": "{background}",
+        "input.foreground": "{foreground}",
+        "input.border": "{color8}55",
+
+        "focusBorder": "{color4}",
+
+        "list.activeSelectionBackground": "{color4}",
+        "list.activeSelectionForeground": "{background}",
+        "list.hoverBackground": "{color4}22"
+    }}
+}}

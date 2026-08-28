@@ -1,0 +1,169 @@
+{{
+    "name": "Pywal Minimal",
+    "type": "dark",
+
+    "colors": {{
+        "editor.background": "{background}",
+        "editor.foreground": "{foreground}",
+
+        "editorCursor.foreground": "{color4}",
+        "editor.selectionBackground": "{color4}55",
+        "editor.inactiveSelectionBackground": "{color4}33",
+
+        "editor.lineHighlightBackground": "{color4}12",
+        "editorLineNumber.foreground": "{color8}",
+        "editorLineNumber.activeForeground": "{color4}",
+
+        "editorIndentGuide.background": "{color8}33",
+        "editorIndentGuide.activeBackground": "{color4}55",
+
+        "editorWhitespace.foreground": "{color8}33",
+
+        "sideBar.background": "{background}",
+        "sideBar.foreground": "{foreground}",
+        "sideBar.border": "{color8}44",
+
+        "activityBar.background": "{background}",
+        "activityBar.foreground": "{foreground}",
+        "activityBar.inactiveForeground": "{color8}",
+        "activityBar.activeBorder": "{color4}",
+
+        "titleBar.activeBackground": "{background}",
+        "titleBar.activeForeground": "{foreground}",
+        "titleBar.inactiveBackground": "{background}",
+        "titleBar.inactiveForeground": "{color8}",
+
+        "tab.activeBackground": "{background}",
+        "tab.activeForeground": "{foreground}",
+        "tab.inactiveBackground": "{background}",
+        "tab.inactiveForeground": "{color8}",
+        "tab.activeBorderTop": "{color4}",
+
+        "statusBar.background": "{background}",
+        "statusBar.foreground": "{foreground}",
+        "statusBarItem.hoverBackground": "{color4}33",
+
+        "panel.background": "{background}",
+        "panel.border": "{color8}44",
+
+        "terminal.background": "{background}",
+        "terminal.foreground": "{foreground}",
+
+        "input.background": "{background}",
+        "input.foreground": "{foreground}",
+        "input.border": "{color8}55",
+        "inputOption.activeBorder": "{color4}",
+
+        "focusBorder": "{color4}",
+        "selection.background": "{color4}55",
+
+        "list.activeSelectionBackground": "{color4}",
+        "list.activeSelectionForeground": "{background}",
+        "list.hoverBackground": "{color4}22",
+
+        "button.background": "{color4}",
+        "button.foreground": "{background}",
+        "button.hoverBackground": "{color4}",
+
+        "scrollbarSlider.background": "{color8}44",
+        "scrollbarSlider.hoverBackground": "{color8}66",
+        "scrollbarSlider.activeBackground": "{color4}88"
+    }},
+
+    "tokenColors": [
+        {{
+            "scope": [
+                "comment",
+                "punctuation.definition.comment"
+            ],
+            "settings": {{
+                "foreground": "{color8}"
+            }}
+        }},
+        {{
+            "scope": [
+                "keyword",
+                "storage",
+                "storage.type",
+                "storage.modifier"
+            ],
+            "settings": {{
+                "foreground": "{color4}"
+            }}
+        }},
+        {{
+            "scope": [
+                "entity.name.function",
+                "support.function",
+                "meta.function-call"
+            ],
+            "settings": {{
+                "foreground": "{color4}"
+            }}
+        }},
+        {{
+            "scope": [
+                "string",
+                "constant.other.symbol"
+            ],
+            "settings": {{
+                "foreground": "{color6}"
+            }}
+        }},
+        {{
+            "scope": [
+                "constant.numeric",
+                "constant.language",
+                "constant.character"
+            ],
+            "settings": {{
+                "foreground": "{color5}"
+            }}
+        }},
+        {{
+            "scope": [
+                "entity.name.type",
+                "entity.name.class",
+                "support.type",
+                "support.class"
+            ],
+            "settings": {{
+                "foreground": "{color4}"
+            }}
+        }},
+        {{
+            "scope": [
+                "variable",
+                "meta.definition.variable"
+            ],
+            "settings": {{
+                "foreground": "{foreground}"
+            }}
+        }},
+        {{
+            "scope": [
+                "entity.name.tag"
+            ],
+            "settings": {{
+                "foreground": "{color4}"
+            }}
+        }},
+        {{
+            "scope": [
+                "entity.other.attribute-name"
+            ],
+            "settings": {{
+                "foreground": "{color5}"
+            }}
+        }},
+        {{
+            "scope": [
+                "punctuation",
+                "meta.brace"
+            ],
+            "settings": {{
+                "foreground": "{foreground}"
+            }}
+        }}
+    ]
+}}

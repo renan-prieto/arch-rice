@@ -1,0 +1,17 @@
+# Cache
+.cache/
+*.log
+
+# Segredos
+.env
+.env.*
+*.pem
+*.key
+
+# VS Code
+vscode/*.backup
+vscode/History/
+vscode/logs/
+
+# Pywal arquivos temporários/cache
+wal/colors*

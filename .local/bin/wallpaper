@@ -1,0 +1,42 @@
+#!/bin/bash
+
+WALLPAPER="$1"
+
+if [ -z "$WALLPAPER" ]; then
+    echo "Uso: wallpaper <arquivo>"
+    exit 1
+fi
+
+if [ ! -f "$WALLPAPER" ]; then
+    echo "Erro: wallpaper não encontrado: $WALLPAPER"
+    exit 1
+fi
+
+WAL="$HOME/.cache/wal"
+
+echo "[1/5] Aplicando wallpaper..."
+
+feh --no-fehbg --bg-fill "$WALLPAPER"
+
+echo "[2/5] Gerando paleta Pywal..."
+
+wal -i "$WALLPAPER"
+
+echo "[3/5] Atualizando VS Code..."
+
+"$HOME/.local/bin/update-vscode-theme"
+
+echo "[4/5] Atualizando Polybar..."
+
+if command -v polybar-msg >/dev/null 2>&1; then
+    polybar-msg cmd restart >/dev/null 2>&1
+fi
+
+echo "[5/5] Atualizando Kitty..."
+
+if command -v kitty >/dev/null 2>&1; then
+    kitty @ set-colors --all "$WAL/colors-kitty.conf" >/dev/null 2>&1
+fi
+
+echo
+echo "✓ atualizado"
