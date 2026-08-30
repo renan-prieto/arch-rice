@@ -1,4 +1,4 @@
-############################
+###########################
 #          GERAL           #
 ############################
 
@@ -31,10 +31,10 @@ exec --no-startup-id setxkbmap br
 ############################
 
 bindsym $mod+Return exec kitty
-bindsym $mod+t exec thunar
+bindsym $mod+t exec kitty ranger
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/wallpaper-rofi
 bindsym $mod+Shift+e exec betterlockscreen -l blur
+bindsym $mod+Shift+w exec --no-startup-id ~/.config/rofi/scripts/wallpaper-selector
 
 ############################
 #         SISTEMA          #

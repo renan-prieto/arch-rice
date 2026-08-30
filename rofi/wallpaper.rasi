@@ -1,0 +1,76 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+configuration {
+    location: 6;
+
+    show-icons: true;
+
+    kb-cancel: "Escape";
+    kb-accept-entry: "Return";
+
+    cycle: true;
+}
+
+window {
+    width: 900px;
+    height: 270px;
+    y-offset: -20px;
+    border-radius: 0px;
+
+    padding: 10px;
+}
+
+mainbox {
+    children: [
+        listview
+    ];
+
+    spacing: 15px;
+}
+
+message {
+}
+
+listview {
+    columns: 3;
+    lines: 1;
+
+    spacing: 10px;
+
+    fixed-height: false;
+    fixed-columns: true;
+
+    scrollbar: false;
+
+    flow: horizontal;
+}
+
+element {
+    orientation: vertical;
+
+    padding: 0px;
+
+    border-radius: 0px;
+   
+}
+
+element selected {
+    border: 2px;
+    border-color: #ffffff;
+}
+
+element-icon {
+    size: 220px;
+
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element-text {
+    enabled: false;
+}

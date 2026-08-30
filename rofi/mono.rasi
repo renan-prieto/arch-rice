@@ -30,7 +30,7 @@ window {
 
     background-color: @background;
 
-    width: 600px;
+    width: 800px;
     height: 410px;
 
     padding: 10px;
@@ -58,7 +58,7 @@ mainbox {
 
 inputbar {
     background-color: @background;
-
+    width: 50%;
     children: [
         prompt,
         entry
@@ -94,13 +94,15 @@ entry {
 
 listview {
     background-color: @background;
-
     children: [
         element
     ];
 
-    spacing: 6px;
-    padding: 4px 0px 0px 0px;
+    spacing: 4px;
+
+    padding: 6px 0px 0px 0px;
+
+    scrollbar: false;
 }
 
 /* =========================
@@ -108,38 +110,48 @@ listview {
    ========================= */
 
 element {
+    width: 100%;
+
     children: [
         element-text
     ];
 
-    margin: 0;
-    padding: 4px;
+    margin: 0px;
+    padding: 4px 9px;
 
     border-radius: 0px;
 }
 
-/* Item normal */
+/* =========================
+   Item normal
+   ========================= */
 
 element normal {
     background-color: transparent;
     text-color: @foreground;
 }
 
-/* Item alternado */
+/* =========================
+   Item alternado
+   ========================= */
 
 element alternate {
     background-color: transparent;
     text-color: @foreground;
 }
 
-/* Item selecionado */
+/* =========================
+   Item selecionado
+   ========================= */
 
 element selected {
     background-color: @color4;
     text-color: @background;
 }
 
-/* Texto selecionado */
+/* =========================
+   Texto selecionado
+   ========================= */
 
 element-text selected {
     background-color: transparent;
@@ -175,4 +187,3 @@ textbox {
     background-color: transparent;
     text-color: @foreground;
 }
-

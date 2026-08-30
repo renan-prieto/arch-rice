@@ -1,0 +1,57 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    font: "Symbols Nerd Font 18";
+
+    background-color: @background;
+    text-color: @foreground;
+}
+
+window {
+    width: 220px;
+    padding: 12px;
+
+    background-color: @background;
+    border: 0px;
+}
+
+mainbox {
+    children: [ "listview" ];
+}
+
+listview {
+    columns: 3;
+    lines: 1;
+
+    spacing: 8px;
+
+    scrollbar: false;
+    fixed-height: true;
+}
+
+element {
+    width: 50px;
+    height: 50px;
+
+    padding: 0px;
+
+    background-color: transparent;
+    text-color: @foreground;
+
+    border: 0px;
+}
+
+element selected {
+    background-color: transparent;
+    text-color: @foreground;
+
+    border: 2px;
+    border-color: @foreground;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+
+    text-color: inherit;
+}
