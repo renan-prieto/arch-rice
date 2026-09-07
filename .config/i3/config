@@ -1,0 +1,193 @@
+###########################
+#          GERAL           #
+############################
+
+set $mod Mod1
+set $altmod Mod4
+font pango:Terminus 12
+floating_modifier $mod
+tiling_drag modifier titlebar
+
+############################
+#        AUTOSTART         #
+############################
+
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l
+exec --no-startup-id nm-applet
+
+exec --no-startup-id ~/.config/polybar/launch.sh 
+exec --no-startup-id bash -c 'if [ -f "$HOME/.cache/current-wallpaper" ]; then feh --no-fehbg --bg-fill "$(cat "$HOME/.cache/current-wallpaper")"; fi'
+
+exec_always --no-startup-id xset -b
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+
+exec --no-startup-id xinput set-prop 7 "libinput Accel Speed" -0.85
+exec --no-startup-id setxkbmap br
+
+
+############################
+#        APLICAÇÕES        #
+############################
+
+bindsym $mod+Return exec kitty
+bindsym $mod+t exec kitty ranger
+bindsym $mod+d exec rofi -show drun -window-title "RofiLauncher"
+bindsym $mod+Shift+e exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh -window-title "RofiPower"
+bindsym $mod+Shift+w exec --no-startup-id ~/.config/rofi/scripts/wallpaper-selector -window-title "RofiWallpaper"
+
+############################
+#         SISTEMA          #
+############################
+
+set $refresh_i3status killall -SIGUSR1 i3status
+
+# Volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Screenshot
+bindsym Print exec flameshot gui
+
+############################
+#          FOCO            #
+############################
+
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ccedilla focus right
+
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
+bindsym $mod+Right focus right
+
+############################
+#          MOVER           #
+############################
+
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ccedilla move right
+
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Right move right
+
+############################
+#         LAYOUT           #
+############################
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+
+bindsym $mod+b exec --no-startup-id ~/.config/polybar/scripts/toggle-polybar
+############################
+#        WORKSPACES        #
+############################
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Trocar workspace
+bindsym $mod+1 exec --no-startup-id ~/.local/bin/workspace-switch 1
+bindsym $mod+2 exec --no-startup-id ~/.local/bin/workspace-switch 2
+bindsym $mod+3 exec --no-startup-id ~/.local/bin/workspace-switch 3
+bindsym $mod+4 exec --no-startup-id ~/.local/bin/workspace-switch 4
+bindsym $mod+5 exec --no-startup-id ~/.local/bin/workspace-switch 5
+bindsym $mod+6 exec --no-startup-id ~/.local/bin/workspace-switch 6
+bindsym $mod+7 exec --no-startup-id ~/.local/bin/workspace-switch 7
+bindsym $mod+8 exec --no-startup-id ~/.local/bin/workspace-switch 8
+bindsym $mod+9 exec --no-startup-id ~/.local/bin/workspace-switch 9
+bindsym $mod+0 exec --no-startup-id ~/.local/bin/workspace-switch 10
+
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+
+# Mover para workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+############################
+#          RESIZE          #
+############################
+
+mode "resize" {
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym ccedilla resize grow width 10 px or 10 ppt
+
+    bindsym Left  resize shrink width 10 px or 10 ppt
+    bindsym Down  resize grow height 10 px or 10 ppt
+    bindsym Up    resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+
+############################
+#          BORDAS          #
+############################
+
+for_window [class="^.*"] border pixel 0
+gaps inner 8
+gaps outer 0
+
+############################
+#          CORES           #
+############################
+
+set $bg        #000000
+set $fg        #ffffff
+set $inactive  #000000
+set $urgent    #ff0000
+
+client.focused          $fg       $fg       $bg $fg
+client.unfocused        $inactive $inactive $fg $inactive
+client.focused_inactive $inactive $inactive $fg $inactive
+client.urgent           $urgent   $urgent   $bg $urgent
+
+############################
+#        RELOAD / EXIT     #
+############################
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+q kill
+

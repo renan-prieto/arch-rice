@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/renan/wallpapers/36592_serial_experiments_lain.png",
+    "alpha": "100",
+    "special": {
+        "background": "#000000",
+        "foreground": "#aaaaaa",
+        "cursor": "#aaaaaa"
+    },
+    "colors": {
+        "color0": "#000000",
+        "color1": "#424242",
+        "color2": "#454545",
+        "color3": "#4B4B4B",
+        "color4": "#555555",
+        "color5": "#595959",
+        "color6": "#5D5D5D",
+        "color7": "#aaaaaa",
+        "color8": "#767676",
+        "color9": "#424242",
+        "color10": "#454545",
+        "color11": "#4B4B4B",
+        "color12": "#555555",
+        "color13": "#595959",
+        "color14": "#5D5D5D",
+        "color15": "#aaaaaa"
+    }
+}

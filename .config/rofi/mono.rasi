@@ -1,0 +1,188 @@
+/* =========================
+   Configuração global
+   ========================= */
+
+* {
+    modi: "drun,run,window";
+    font: "Terminus 14";
+
+    background-color: @background;
+    text-color: @foreground;
+}
+
+/* =========================
+   Configuration
+   ========================= */
+
+configuration {
+    display-drun: "";
+    display-run: "";
+    display-window: "";
+    show-icons: false;
+}
+
+/* =========================
+   Janela principal
+   ========================= */
+
+window {
+    name: "main";
+
+    background-color: @background;
+
+    width: 800px;
+    height: 410px;
+
+    padding: 0px;
+    
+    border: 1px;
+    border-color: @foreground;
+}
+
+/* =========================
+   Container principal
+   ========================= */
+
+mainbox {
+    background-color: @background;
+    border: 1px;
+    border-color: @foreground;
+    children: [
+        inputbar,
+        listview
+    ];
+}
+
+/* =========================
+   Barra de entrada
+   ========================= */
+
+inputbar {
+    background-color: @background;
+    width: 100%;
+    children: [
+        prompt,
+        entry
+    ];
+
+    border: 0px 0px 1px 0px;
+    border-color: @foreground;
+    
+    margin: 0px;
+    padding: 9px;
+}
+
+/* =========================
+   Prompt
+   ========================= */
+textbox-prompt-colon {
+    str: "";
+}
+prompt {
+    text-color: @foreground;
+}
+
+/* =========================
+   Campo de texto
+   ========================= */
+
+entry {
+    text-color: @foreground;
+    background-color: transparent;
+}
+
+/* =========================
+   Lista
+   ========================= */
+
+listview {
+    background-color: @background;
+    children: [
+        element
+    ];
+    scrollbar: false;
+    spacing: 4px;
+
+    padding: 6px 0px 0px 0px;
+
+}
+
+/* =========================
+   Elementos
+   ========================= */
+
+element {
+    width: 100%;
+
+    children: [
+        element-text
+    ];
+
+    margin: 0px;
+    padding: 9px 9px;
+
+    border-radius: 0px;
+}
+
+/* =========================
+   Item normal
+   ========================= */
+
+element normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+/* =========================
+   Item alternado
+   ========================= */
+
+element alternate {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+/* =========================
+   Item selecionado
+   ========================= */
+
+element selected {
+    background-color: @color4;
+    text-color: @background;
+}
+
+/* =========================
+   Texto selecionado
+   ========================= */
+
+element-text selected {
+    background-color: transparent;
+    text-color: @background;
+}
+
+/* =========================
+   Ícones
+   ========================= */
+
+element-icon {
+    background-color: transparent;
+}
+
+/* =========================
+   Scrollbar
+   ========================= */
+
+
+/* =========================
+   Mensagens
+   ========================= */
+
+message {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @foreground;
+}

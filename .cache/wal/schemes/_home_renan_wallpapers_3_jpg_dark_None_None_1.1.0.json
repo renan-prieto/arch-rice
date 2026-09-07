@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/renan/wallpapers/3.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#020202",
+        "foreground": "#dedede",
+        "cursor": "#dedede"
+    },
+    "colors": {
+        "color0": "#020202",
+        "color1": "#807D7E",
+        "color2": "#7F7D80",
+        "color3": "#817E82",
+        "color4": "#8E8D8E",
+        "color5": "#A09EA1",
+        "color6": "#AFAFAF",
+        "color7": "#dedede",
+        "color8": "#9b9b9b",
+        "color9": "#807D7E",
+        "color10": "#7F7D80",
+        "color11": "#817E82",
+        "color12": "#8E8D8E",
+        "color13": "#A09EA1",
+        "color14": "#AFAFAF",
+        "color15": "#dedede"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/renan/wallpapers/wallhaven-gwdvxq.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#040A15",
+        "foreground": "#ced5e5",
+        "cursor": "#ced5e5"
+    },
+    "colors": {
+        "color0": "#040A15",
+        "color1": "#1C5B9E",
+        "color2": "#3656A8",
+        "color3": "#606697",
+        "color4": "#9B6CA6",
+        "color5": "#5BA0D6",
+        "color6": "#9A99AA",
+        "color7": "#ced5e5",
+        "color8": "#9095a0",
+        "color9": "#1C5B9E",
+        "color10": "#3656A8",
+        "color11": "#606697",
+        "color12": "#9B6CA6",
+        "color13": "#5BA0D6",
+        "color14": "#9A99AA",
+        "color15": "#ced5e5"
+    }
+}

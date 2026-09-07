@@ -1,0 +1,15 @@
+#!/bin/bash
+
+STATE="$XDG_RUNTIME_DIR/polybar-hidden"
+
+if [ -f "$STATE" ]; then
+    # Mostrar todas as barras
+    polybar-msg cmd show
+
+    rm -f "$STATE"
+else
+    # Esconder todas as barras
+    polybar-msg cmd hide
+
+    touch "$STATE"
+fi

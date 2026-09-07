@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/renan/wallpapers/manga.png"
+let background = "#121518"
+let foreground = "#cbe6f0"
+let cursor     = "#cbe6f0"
+
+" Colors
+let color0  = "#121518"
+let color1  = "#B2A35C"
+let color2  = "#5D7083"
+let color3  = "#B1739C"
+let color4  = "#68B6C5"
+let color5  = "#DA96AF"
+let color6  = "#C5A5BC"
+let color7  = "#cbe6f0"
+let color8  = "#8ea1a8"
+let color9  = "#B2A35C"
+let color10 = "#5D7083"
+let color11 = "#B1739C"
+let color12 = "#68B6C5"
+let color13 = "#DA96AF"
+let color14 = "#C5A5BC"
+let color15 = "#cbe6f0"

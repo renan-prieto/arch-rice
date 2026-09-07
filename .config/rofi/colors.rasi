@@ -1,0 +1,15 @@
+* {
+    background: #161217;
+    foreground: #eae0e7;
+
+    primary: #e7b6f0;
+    secondary: #d6c0d6;
+    tertiary: #f5b7b2;
+
+    surface: #161217;
+    surface-variant: #4c444c;
+
+    outline: #988e97;
+
+    error: #ffb4ab;
+}

@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/renan/wallpapers/wallhaven-6ly36w.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0B201E",
+        "foreground": "#dfe7ed",
+        "cursor": "#dfe7ed"
+    },
+    "colors": {
+        "color0": "#0B201E",
+        "color1": "#2EA4D8",
+        "color2": "#019BE5",
+        "color3": "#02A3E8",
+        "color4": "#62B2DB",
+        "color5": "#99B9AE",
+        "color6": "#A7CFE6",
+        "color7": "#dfe7ed",
+        "color8": "#9ca1a5",
+        "color9": "#2EA4D8",
+        "color10": "#019BE5",
+        "color11": "#02A3E8",
+        "color12": "#62B2DB",
+        "color13": "#99B9AE",
+        "color14": "#A7CFE6",
+        "color15": "#dfe7ed"
+    }
+}

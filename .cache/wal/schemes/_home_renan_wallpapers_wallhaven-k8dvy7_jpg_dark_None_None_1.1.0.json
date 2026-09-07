@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/renan/wallpapers/wallhaven-k8dvy7.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#070C12",
+        "foreground": "#cca1a3",
+        "cursor": "#cca1a3"
+    },
+    "colors": {
+        "color0": "#070C12",
+        "color1": "#423659",
+        "color2": "#593455",
+        "color3": "#713657",
+        "color4": "#4E3965",
+        "color5": "#5C4570",
+        "color6": "#883553",
+        "color7": "#cca1a3",
+        "color8": "#8e7072",
+        "color9": "#423659",
+        "color10": "#593455",
+        "color11": "#713657",
+        "color12": "#4E3965",
+        "color13": "#5C4570",
+        "color14": "#883553",
+        "color15": "#cca1a3"
+    }
+}

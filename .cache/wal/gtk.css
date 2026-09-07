@@ -1,0 +1,69 @@
+@define-color theme_bg_color #121518;
+@define-color theme_fg_color #cbe6f0;
+@define-color theme_base_color #121518;
+@define-color theme_text_color #cbe6f0;
+@define-color selected_bg_color #68B6C5;
+@define-color selected_fg_color #121518;
+@define-color insensitive_bg_color #121518;
+@define-color insensitive_fg_color #8ea1a8;
+@define-color borders #8ea1a8;
+
+window {
+    background-color: #121518;
+    color: #cbe6f0;
+}
+
+.background {
+    background-color: #121518;
+    color: #cbe6f0;
+}
+
+.view {
+    background-color: #121518;
+    color: #cbe6f0;
+}
+
+.view:selected,
+.view:selected:focus {
+    background-color: #68B6C5;
+    color: #121518;
+}
+
+.sidebar {
+    background-color: #121518;
+    color: #cbe6f0;
+}
+
+.sidebar row:selected {
+    background-color: #68B6C5;
+    color: #121518;
+}
+
+headerbar {
+    background-color: #121518;
+    color: #cbe6f0;
+}
+
+button {
+    background-color: #121518;
+    color: #cbe6f0;
+    border-color: #8ea1a8;
+}
+
+button:hover {
+    background-color: #68B6C5;
+    color: #121518;
+}
+
+entry {
+    background-color: #121518;
+    color: #cbe6f0;
+    border-color: #8ea1a8;
+}
+
+tooltip {
+    background-color: #121518;
+    color: #cbe6f0;
+    border-color: #8ea1a8;
+}
+EOF

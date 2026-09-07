@@ -1,0 +1,21 @@
+set $wallpaper /home/renan/wallpapers/manga.png
+
+set $background #121518
+set $foreground #cbe6f0
+
+set $color0 #121518
+set $color1 #B2A35C
+set $color2 #5D7083
+set $color3 #B1739C
+set $color4 #68B6C5
+set $color5 #DA96AF
+set $color6 #C5A5BC
+set $color7 #cbe6f0
+set $color8 #8ea1a8
+set $color9 #B2A35C
+set $color10 #5D7083
+set $color11 #B1739C
+set $color12 #68B6C5
+set $color13 #DA96AF
+set $color14 #C5A5BC
+set $color15 #cbe6f0

@@ -18,5 +18,5 @@ SELECTED=$(find "$WALLPAPER_DIR" -type f -name "$SELECTED" -print -quit)
 
 [ -z "$SELECTED" ] && exit 0
 
-# Deixa o script principal cuidar de TUDO
+# Deixa o script principal cuidar de tudo
 "$HOME/.local/bin/wallpaper" "$SELECTED"

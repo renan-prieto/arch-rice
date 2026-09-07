@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/renan/wallpapers/lofi-cafe_gray.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0e1012",
+        "foreground": "#d9d6da",
+        "cursor": "#d9d6da"
+    },
+    "colors": {
+        "color0": "#0e1012",
+        "color1": "#8A7374",
+        "color2": "#677688",
+        "color3": "#977D84",
+        "color4": "#768697",
+        "color5": "#A39899",
+        "color6": "#CEB0B1",
+        "color7": "#d9d6da",
+        "color8": "#979598",
+        "color9": "#8A7374",
+        "color10": "#677688",
+        "color11": "#977D84",
+        "color12": "#768697",
+        "color13": "#A39899",
+        "color14": "#CEB0B1",
+        "color15": "#d9d6da"
+    }
+}

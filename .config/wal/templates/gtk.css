@@ -1,0 +1,69 @@
+@define-color theme_bg_color {background};
+@define-color theme_fg_color {foreground};
+@define-color theme_base_color {background};
+@define-color theme_text_color {foreground};
+@define-color selected_bg_color {color4};
+@define-color selected_fg_color {background};
+@define-color insensitive_bg_color {background};
+@define-color insensitive_fg_color {color8};
+@define-color borders {color8};
+
+window {{
+    background-color: {background};
+    color: {foreground};
+}}
+
+.background {{
+    background-color: {background};
+    color: {foreground};
+}}
+
+.view {{
+    background-color: {background};
+    color: {foreground};
+}}
+
+.view:selected,
+.view:selected:focus {{
+    background-color: {color4};
+    color: {background};
+}}
+
+.sidebar {{
+    background-color: {background};
+    color: {foreground};
+}}
+
+.sidebar row:selected {{
+    background-color: {color4};
+    color: {background};
+}}
+
+headerbar {{
+    background-color: {background};
+    color: {foreground};
+}}
+
+button {{
+    background-color: {background};
+    color: {foreground};
+    border-color: {color8};
+}}
+
+button:hover {{
+    background-color: {color4};
+    color: {background};
+}}
+
+entry {{
+    background-color: {background};
+    color: {foreground};
+    border-color: {color8};
+}}
+
+tooltip {{
+    background-color: {background};
+    color: {foreground};
+    border-color: {color8};
+}}
+EOF

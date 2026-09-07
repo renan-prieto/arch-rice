@@ -1,0 +1,91 @@
+{
+    "name": "Pywal Adaptive",
+
+    "globals": {
+        "background": "#121518",
+        "foreground": "#cbe6f0",
+        "caret": "#cbe6f0",
+        "block_caret": "#cbe6f0",
+        "selection": "#68B6C555",
+        "selection_border": "#68B6C5",
+        "inactive_selection": "#8ea1a844",
+        "guide": "#8ea1a833",
+        "active_guide": "#68B6C566",
+        "stack_guide": "#68B6C544",
+        "shadow": "#121518"
+    },
+
+    "rules": [
+        {
+            "name": "Comments",
+            "scope": "comment",
+            "foreground": "#8ea1a8",
+            "font_style": "italic"
+        },
+        {
+            "name": "Keywords",
+            "scope": "keyword",
+            "foreground": "#DA96AF"
+        },
+        {
+            "name": "Storage",
+            "scope": "storage",
+            "foreground": "#DA96AF"
+        },
+        {
+            "name": "Functions",
+            "scope": "entity.name.function",
+            "foreground": "#68B6C5"
+        },
+        {
+            "name": "Function calls",
+            "scope": "support.function",
+            "foreground": "#68B6C5"
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "foreground": "#5D7083"
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "foreground": "#B1739C"
+        },
+        {
+            "name": "Constants",
+            "scope": "constant.language",
+            "foreground": "#B1739C"
+        },
+        {
+            "name": "Types",
+            "scope": "entity.name.type",
+            "foreground": "#C5A5BC"
+        },
+        {
+            "name": "Classes",
+            "scope": "entity.name.class",
+            "foreground": "#C5A5BC"
+        },
+        {
+            "name": "Variables",
+            "scope": "variable",
+            "foreground": "#cbe6f0"
+        },
+        {
+            "name": "Tags",
+            "scope": "entity.name.tag",
+            "foreground": "#DA96AF"
+        },
+        {
+            "name": "Attributes",
+            "scope": "entity.other.attribute-name",
+            "foreground": "#B1739C"
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation",
+            "foreground": "#cbe6f0"
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{{
+    "name": "Pywal Adaptive",
+
+    "globals": {{
+        "background": "{background}",
+        "foreground": "{foreground}",
+        "caret": "{color7}",
+        "block_caret": "{color7}",
+        "selection": "{color4}55",
+        "selection_border": "{color4}",
+        "inactive_selection": "{color8}44",
+        "guide": "{color8}33",
+        "active_guide": "{color4}66",
+        "stack_guide": "{color4}44",
+        "shadow": "{background}"
+    }},
+
+    "rules": [
+        {{
+            "name": "Comments",
+            "scope": "comment",
+            "foreground": "{color8}",
+            "font_style": "italic"
+        }},
+        {{
+            "name": "Keywords",
+            "scope": "keyword",
+            "foreground": "{color5}"
+        }},
+        {{
+            "name": "Storage",
+            "scope": "storage",
+            "foreground": "{color5}"
+        }},
+        {{
+            "name": "Functions",
+            "scope": "entity.name.function",
+            "foreground": "{color4}"
+        }},
+        {{
+            "name": "Function calls",
+            "scope": "support.function",
+            "foreground": "{color4}"
+        }},
+        {{
+            "name": "Strings",
+            "scope": "string",
+            "foreground": "{color2}"
+        }},
+        {{
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "foreground": "{color3}"
+        }},
+        {{
+            "name": "Constants",
+            "scope": "constant.language",
+            "foreground": "{color3}"
+        }},
+        {{
+            "name": "Types",
+            "scope": "entity.name.type",
+            "foreground": "{color6}"
+        }},
+        {{
+            "name": "Classes",
+            "scope": "entity.name.class",
+            "foreground": "{color6}"
+        }},
+        {{
+            "name": "Variables",
+            "scope": "variable",
+            "foreground": "{foreground}"
+        }},
+        {{
+            "name": "Tags",
+            "scope": "entity.name.tag",
+            "foreground": "{color5}"
+        }},
+        {{
+            "name": "Attributes",
+            "scope": "entity.other.attribute-name",
+            "foreground": "{color3}"
+        }},
+        {{
+            "name": "Punctuation",
+            "scope": "punctuation",
+            "foreground": "{color7}"
+        }}
+    ]
+}}

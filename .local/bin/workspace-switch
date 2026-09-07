@@ -1,0 +1,68 @@
+#!/bin/bash
+
+TARGET="$1"
+
+if [ -z "$TARGET" ]; then
+    echo "Uso: workspace-switch <workspace>"
+    exit 1
+fi
+
+# Workspace atualmente ativa
+CURRENT=$(i3-msg -t get_workspaces | python -c '
+import sys, json
+data = json.load(sys.stdin)
+for ws in data:
+    if ws["focused"]:
+        print(ws["num"])
+        break
+')
+
+# Se já estiver nela, não faz nada
+if [ "$CURRENT" = "$TARGET" ]; then
+    exit 0
+fi
+
+# Descobre a direção
+if [ "$TARGET" -gt "$CURRENT" ]; then
+    # Indo para a direita
+    OUT=1
+    IN=2
+else
+    # Indo para a esquerda
+    OUT=2
+    IN=1
+fi
+
+# Marca as janelas da workspace atual
+while read -r WIN DESKTOP; do
+    [ -z "$WIN" ] && continue
+
+    if [ "$DESKTOP" = "$CURRENT" ]; then
+        xprop -id "$WIN" \
+            -f _MY_CUSTOM_WORKSPACE_SWITCH 32i \
+            -set _MY_CUSTOM_WORKSPACE_SWITCH "$OUT"
+    fi
+done < <(wmctrl -l | awk '{print $1, $2}')
+
+# Marca as janelas da workspace destino
+while read -r WIN DESKTOP; do
+    [ -z "$WIN" ] && continue
+
+    if [ "$DESKTOP" = "$TARGET" ]; then
+        xprop -id "$WIN" \
+            -f _MY_CUSTOM_WORKSPACE_SWITCH 32i \
+            -set _MY_CUSTOM_WORKSPACE_SWITCH "$IN"
+    fi
+done < <(wmctrl -l | awk '{print $1, $2}')
+
+# Troca de workspace
+i3-msg "workspace number $TARGET"
+
+# Espera a animação terminar
+sleep 0.35
+
+# Remove a propriedade das janelas
+while read -r WIN; do
+    [ -z "$WIN" ] && continue
+    xprop -id "$WIN" -remove _MY_CUSTOM_WORKSPACE_SWITCH 2>/dev/null
+done < <(wmctrl -l | awk '{print $1}')

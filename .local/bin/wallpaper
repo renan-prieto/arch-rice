@@ -1,6 +1,8 @@
 #!/bin/bash
 
 WALLPAPER="$1"
+WAL="$HOME/.cache/wal"
+CURRENT="$HOME/.cache/current-wallpaper"
 
 if [ -z "$WALLPAPER" ]; then
     echo "Uso: wallpaper <arquivo>"
@@ -12,26 +14,28 @@ if [ ! -f "$WALLPAPER" ]; then
     exit 1
 fi
 
-WAL="$HOME/.cache/wal"
+WALLPAPER="$(realpath "$WALLPAPER")"
 
 echo "[1/5] Aplicando wallpaper..."
 
 feh --no-fehbg --bg-fill "$WALLPAPER"
 
+# Salva o wallpaper atual
+printf '%s\n' "$WALLPAPER" > "$CURRENT"
+
 echo "[2/5] Gerando paleta Pywal..."
 
-wal -i "$WALLPAPER"
+wal -i "$WALLPAPER" -n
 
-echo "[3/5] Atualizando VS Code..."
+echo "[3/5] Atualizando Polybar..."
 
-"$HOME/.local/bin/update-vscode-theme"
+# Atualiza a Polybar imediatamente após o Pywal
+"$HOME/.config/polybar/launch.sh" 
 
-echo "[4/5] Atualizando Polybar..."
+echo "[4/5] Atualizando lockscreen..."
 
-if command -v polybar-msg >/dev/null 2>&1; then
-    polybar-msg cmd restart >/dev/null 2>&1
-fi
-
+# Só depois gera o cache do Betterlockscreen
+~/.config/i3/scripts/update-lockscreen.sh
 echo "[5/5] Atualizando Kitty..."
 
 if command -v kitty >/dev/null 2>&1; then
@@ -40,3 +44,4 @@ fi
 
 echo
 echo "✓ atualizado"
+
