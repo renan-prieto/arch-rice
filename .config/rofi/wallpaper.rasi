@@ -18,7 +18,7 @@ configuration {
 
 window {
     width: 900px;
-    height: 245px;
+    height: 200px;
 
     y-offset: -20px;
 
@@ -53,23 +53,25 @@ listview {
 
 element {
     orientation: vertical;
-
-    padding: 0px;
-    margin: 0px;
+    padding: -48px -68px -48px -68px;
+    margin: 5px;
 
     border-radius: 0px;
+
+    children: [
+        element-icon
+    ];
 }
 
 element selected {
-    border: 2px;
+    border: 1px;
     border-color: @foreground;
-
-    background-color: transparent;
+    y-offset: 200px;
 }
 
 element-icon {
-    size: 220px;
-
+    size: 255px;
+    background-color: @background;
     horizontal-align: 0.5;
     vertical-align: 0.5;
 }
@@ -77,3 +79,4 @@ element-icon {
 element-text {
     enabled: false;
 }
+
