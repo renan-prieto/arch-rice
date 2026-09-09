@@ -1,3 +1,5 @@
+include ~/.cache/wal/i3-colors
+
 ###########################
 #          GERAL           #
 ############################
@@ -112,16 +114,16 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Trocar workspace
-bindsym $mod+1 exec --no-startup-id ~/.local/bin/workspace-switch 1
-bindsym $mod+2 exec --no-startup-id ~/.local/bin/workspace-switch 2
-bindsym $mod+3 exec --no-startup-id ~/.local/bin/workspace-switch 3
-bindsym $mod+4 exec --no-startup-id ~/.local/bin/workspace-switch 4
-bindsym $mod+5 exec --no-startup-id ~/.local/bin/workspace-switch 5
-bindsym $mod+6 exec --no-startup-id ~/.local/bin/workspace-switch 6
-bindsym $mod+7 exec --no-startup-id ~/.local/bin/workspace-switch 7
-bindsym $mod+8 exec --no-startup-id ~/.local/bin/workspace-switch 8
-bindsym $mod+9 exec --no-startup-id ~/.local/bin/workspace-switch 9
-bindsym $mod+0 exec --no-startup-id ~/.local/bin/workspace-switch 10
+bindsym $mod+1 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 1
+bindsym $mod+2 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 2
+bindsym $mod+3 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 3
+bindsym $mod+4 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 4
+bindsym $mod+5 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 5
+bindsym $mod+6 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 6
+bindsym $mod+7 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 7
+bindsym $mod+8 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 8
+bindsym $mod+9 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 9
+bindsym $mod+0 exec --no-startup-id ~/.config/i3/scripts/workspace-direction.sh 10
 
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
@@ -164,8 +166,8 @@ bindsym $mod+r mode "resize"
 ############################
 #          BORDAS          #
 ############################
+default_border pixel 2
 
-for_window [class="^.*"] border pixel 0
 gaps inner 8
 gaps outer 0
 
@@ -173,15 +175,10 @@ gaps outer 0
 #          CORES           #
 ############################
 
-set $bg        #000000
-set $fg        #ffffff
-set $inactive  #000000
-set $urgent    #ff0000
-
-client.focused          $fg       $fg       $bg $fg
-client.unfocused        $inactive $inactive $fg $inactive
-client.focused_inactive $inactive $inactive $fg $inactive
-client.urgent           $urgent   $urgent   $bg $urgent
+#client.focused          $color4 $color4 $foreground $color4 $color4
+#client.unfocused        $color0 $color0 $foreground $color0 $color0
+#client.focused_inactive $color8 $color8 $foreground $color8 $color8
+#client.urgent           $color1 $color1 $foreground $color1 $color1
 
 ############################
 #        RELOAD / EXIT     #
