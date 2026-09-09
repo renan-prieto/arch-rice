@@ -1,4 +1,4 @@
-Folders
+FOLDER
 .cache {
   wal/*
 }
@@ -27,3 +27,19 @@ Folders
 }
 
 wallpapers
+
+REQUIREMENTS
+sudo pacman -S firefox polybar rofi jq kitty thunar ranger nvim picom feh terminus-font ttf-nerd-fonts-symbols
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay & makepkg -si & cd
+yay -S python-pywal betterlockscreen
+
+
+PERMISSIONS
+chmod +x ~/.config/i3/scripts/update-lockscreen.sh
+chmod +x ~/.config/i3/scripts/workspace-direction.sh
+chmod +x ~/.local/bin/wallpaper
+chmod +x ~/.local/bin/wallpaper-rofi
+
+
